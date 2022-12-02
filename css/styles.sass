@@ -81,15 +81,17 @@ body
         font-weight: 500
         color: #292929dd
     .cards-productos
-        display: flex
-        
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
         .card-producto
             margin-right: 2rem 
-            height: 35rem
+            height: 30rem
             width: 25rem
             div
                 img
-                    width: 25rem
+                    max-width: 100%
+                    width: 100%
                     background-color: #a8a8a833
             div
                 .nombre-prod
@@ -103,6 +105,33 @@ body
                     font-weight: 700
                 .precio
                     font-weight: 700
+
+.comparative-table
+    width: 80%
+    padding-left: 10%
+    padding-right: 10%
+    table
+        th
+            text-transform: uppercase
+            font-weight: 500
+        
+        th,td
+            padding: 10px
+            text-align: center
+            border-bottom: 1px solid #c3c3c3
+
+        tr
+            td
+                img
+                    width: 8rem
+
+        tr
+            .tabla-peque
+                display: none
+           
+
+        tr:nth-child(even)
+            background-color: #ffffff
 
 @media screen and (max-width: 1000px) 
     .menu-nav
@@ -130,3 +159,43 @@ body
     .categorias
         overflow: auto
 
+
+    .productos
+            .cards-productos
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                .card-producto
+                    height: 20rem
+                    width: 15rem
+                    .imagen-producto
+                        img
+                            max-width: 100%
+                            width: 15rem
+
+    table
+        tr
+            .tabla-grande
+                display: none
+
+
+@media screen and (max-width: 700px) 
+    .productos
+        .cards-productos
+            display: grid
+            grid-template-columns: 1fr 1fr
+            .card-producto
+                .imagen-producto
+                    img
+                        max-width: 100%
+                        width: 20rem
+
+@media screen and (max-width:600px) 
+    .productos
+        .cards-productos
+            display: grid
+            grid-template-columns: 1fr
+            .card-producto
+                .imagen-producto
+                    img
+                        max-width: 100%
+                        width: 100%

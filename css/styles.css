@@ -94,15 +94,18 @@ body {
   color: rgba(41, 41, 41, 0.8666666667);
 }
 .productos .cards-productos {
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .productos .cards-productos .card-producto {
   margin-right: 2rem;
-  height: 35rem;
+  height: 30rem;
   width: 25rem;
 }
 .productos .cards-productos .card-producto div img {
-  width: 25rem;
+  max-width: 100%;
+  width: 100%;
   background-color: rgba(168, 168, 168, 0.2);
 }
 .productos .cards-productos .card-producto div .nombre-prod {
@@ -118,6 +121,30 @@ body {
 }
 .productos .cards-productos .card-producto div .precio {
   font-weight: 700;
+}
+
+.comparative-table {
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.comparative-table table th {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.comparative-table table th, .comparative-table table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #c3c3c3;
+}
+.comparative-table table tr td img {
+  width: 8rem;
+}
+.comparative-table table tr .tabla-peque {
+  display: none;
+}
+.comparative-table table tr:nth-child(even) {
+  background-color: #ffffff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -149,4 +176,39 @@ body {
   .categorias {
     overflow: auto;
   }
-}/*# sourceMappingURL=styles.css.map */
+  .productos .cards-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .productos .cards-productos .card-producto {
+    height: 20rem;
+    width: 15rem;
+  }
+  .productos .cards-productos .card-producto .imagen-producto img {
+    max-width: 100%;
+    width: 15rem;
+  }
+  table tr .tabla-grande {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .productos .cards-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .productos .cards-productos .card-producto .imagen-producto img {
+    max-width: 100%;
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .productos .cards-productos {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .productos .cards-productos .card-producto .imagen-producto img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
