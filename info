@@ -1,0 +1,21 @@
+Uso media querys
+
+
+Navegacion:
+para cambiar de un menu a otro con display none para no mostrarlo y display block para mostrarlo
+
+Seccion categotias:
+Al reducir la pantalla añadir un scroll horizontal en vez de que se pongan debajo con overflow scroll
+Hacer con un contenedor, align items center,
+
+Seccion productos:
+Usar grid de 3 columnas y cuando se hace mas pequeña la ventana 2 y 1
+Y las imagenes hacer con dos tamaños distintos para cada tamaño de pantalla
+
+Tabla:
+Por defecto 4 columnas
+Version movil hacerlo en tres columnas
+
+
+
+
